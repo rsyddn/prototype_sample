@@ -21,7 +21,7 @@ class TodoCache {
     return i.put(key, value);
   }
 
-  static Future<dynamic> get(String key, dynamic defaultValue) async {
+  static Future<List<Todo>> get(String key, List<Todo> defaultValue) async {
     var i = await TodoCache.instance();
     return i.get(key, defaultValue: defaultValue);
   }
